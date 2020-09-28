@@ -15,12 +15,12 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
- 
- 
- 
- 
- 
- 
+ Integer
+ Character
+ Boolean
+ Floating Point
+ Double Floating Point
+ Valueless or Void
  
  
  
@@ -56,10 +56,25 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
 
+    int numberOfHumans = 2147483647;
+    int garageWidth = 2;
+    int acres = 100;
+    char firstLetterOfLastName = 'S';
+    char modelIdentifier = 'a';
+    char assignedParkingLot = 'B';
+    bool isMale = true;
+    bool isRich = false;
+    bool readyToGoCamping = 1;
+    float bathrooms = 1.5f;
+    float limbs = 4.f;
+    float electricBill = 111.53f;
+    double weightOfMyShoe = 0.734768784569;
+    double existenceThreshold = 3E-5;
+    double volumeOfMyCarInterior = 30.348;
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(numberOfHumans, garageWidth, acres, firstLetterOfLastName, modelIdentifier, assignedParkingLot, isMale,isRich, readyToGoCamping, bathrooms, limbs, electricBill, weightOfMyShoe, existenceThreshold, volumeOfMyCarInterior);
 }
 
 /*
@@ -75,43 +90,78 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+void getIceCream(int numberOfScoops = 2, bool wantsCone = true)
+{
+    ignoreUnused(numberOfScoops, wantsCone);
+}
 /*
  2)
  */
-
+float doTheMath(double numerator, double denominator)
+{
+    ignoreUnused(numerator, denominator);
+    return {};
+}
 /*
  3)
  */
-
+bool determineHappiness(bool hadCoffee, bool gotExercise)
+{
+    ignoreUnused(hadCoffee, gotExercise);
+    return{};
+}
 /*
  4)
  */
-
+float getGarageWidth(int numberOfCars, int numberOfEmptyCarSpots, bool presenceOfGolfCart = false, float widthOfShopArea = 30.f)
+{
+    ignoreUnused(numberOfCars, numberOfEmptyCarSpots, presenceOfGolfCart, widthOfShopArea);
+    return{};
+}
 /*
  5)
  */
-
+void drinkMyTea(bool teaIsReady)
+{
+    ignoreUnused(teaIsReady);
+}
 /*
  6)
  */
-
+void fillTheVoid(char purpose, bool hadCoffee)
+{
+    ignoreUnused(purpose, hadCoffee);
+}
 /*
  7)
  */
-
+float makeCoolSound(float sample, float awesomeVal)
+{
+    ignoreUnused(sample, awesomeVal);
+    return{};
+}
 /*
  8)
  */
-
+float interpolate(float x_1, float x_2)
+{
+    ignoreUnused(x_1, x_2);
+    return{};
+}
 /*
  9)
  */
-
+void makeCoffee(int waterGrams, int coffeeGrams)
+{
+    ignoreUnused(waterGrams, coffeeGrams);
+}
 /*
  10)
  */
-
+void moveIntoVan(bool workIsOnComputer, bool bagsArePacked, int monthsUntilLeaseEnds, int numberOfFamilyMembers = 3, int gallonsOfGasInTank = 20)
+{
+    ignoreUnused(workIsOnComputer, bagsArePacked, monthsUntilLeaseEnds, numberOfFamilyMembers, gallonsOfGasInTank);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
