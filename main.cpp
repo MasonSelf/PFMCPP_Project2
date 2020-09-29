@@ -65,7 +65,7 @@ void variableDeclarations()
     char assignedParkingLot = 'B';
     bool isMale = true;
     bool isRich = false;
-    bool readyToGoCamping = 1;
+    bool readyToGoCamping = 1; FIXME never use anything other than true or false to initialize boolean variables
     float bathrooms = 1.5f;
     float limbs = 4.f;
     float electricBill = 111.53f;
@@ -97,7 +97,7 @@ void getIceCream(int numberOfScoops = 2, bool wantsCone = true)
 /*
  2)
  */
-float doTheMath(double numerator, double denominator)
+float doTheMath(double numerator, double denominator) FIXME see instruction #4)
 {
     ignoreUnused(numerator, denominator);
     return {};
@@ -105,10 +105,10 @@ float doTheMath(double numerator, double denominator)
 /*
  3)
  */
-bool determineHappiness(bool hadCoffee, bool gotExercise)
+bool determineHappiness(bool hadCoffee, bool gotExercise) FIXME see instruction #4)
 {
     ignoreUnused(hadCoffee, gotExercise);
-    return{};
+    return{}; FIXME add a space between the keyword and what's being returned.
 }
 /*
  4)
@@ -116,7 +116,7 @@ bool determineHappiness(bool hadCoffee, bool gotExercise)
 float getGarageWidth(int numberOfCars, int numberOfEmptyCarSpots, bool presenceOfGolfCart = false, float widthOfShopArea = 30.f)
 {
     ignoreUnused(numberOfCars, numberOfEmptyCarSpots, presenceOfGolfCart, widthOfShopArea);
-    return{};
+    return{}; FIXME add a space between the keyword and what's being returned.
 }
 /*
  5)
@@ -128,30 +128,30 @@ void drinkMyTea(bool teaIsReady)
 /*
  6)
  */
-void fillTheVoid(char purpose, bool hadCoffee)
+void fillTheVoid(char purpose, bool hadCoffee) FIXME see instruction #4)
 {
     ignoreUnused(purpose, hadCoffee);
 }
 /*
  7)
  */
-float makeCoolSound(float sample, float awesomeVal)
+float makeCoolSound(float sample, float awesomeVal) FIXME see instruction #4)
 {
     ignoreUnused(sample, awesomeVal);
-    return{};
+    return{}; FIXME add a space between the keyword and what's being returned.
 }
 /*
  8)
  */
-float interpolate(float x_1, float x_2)
+float interpolate(float x_1, float x_2) FIXME see instruction #4)
 {
     ignoreUnused(x_1, x_2);
-    return{};
+    return{}; FIXME add a space between the keyword and what's being returned.
 }
 /*
  9)
  */
-void makeCoffee(int waterGrams, int coffeeGrams)
+void makeCoffee(int waterGrams, int coffeeGrams) FIXME see instruction #4)
 {
     ignoreUnused(waterGrams, coffeeGrams);
 }
@@ -182,25 +182,25 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    FIXME see instruction #5)
     //2)
-    
+    FIXME see instruction #5)
     //3)
-    
+    FIXME see instruction #5)
     //4)
-    
+    FIXME see instruction #5)
     //5)
-    
+    FIXME see instruction #5)
     //6)
-    
+    FIXME see instruction #5)
     //7)
-    
+    FIXME see instruction #5)
     //8)
-    
+    FIXME see instruction #5)
     //9)
-    
+    FIXME see instruction #5)
     //10)
-    
+    FIXME see instruction #5)
     
     ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
