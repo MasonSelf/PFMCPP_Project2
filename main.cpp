@@ -65,7 +65,7 @@ void variableDeclarations()
     char assignedParkingLot = 'B';
     bool isMale = true;
     bool isRich = false;
-    bool readyToGoCamping = 1; FIXME never use anything other than true or false to initialize boolean variables
+    bool readyToGoCamping = false; 
     float bathrooms = 1.5f;
     float limbs = 4.f;
     float electricBill = 111.53f;
@@ -90,14 +90,15 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-void getIceCream(int numberOfScoops = 2, bool wantsCone = true)
+bool getIceCream(int numberOfScoops = 2, bool wantsCone = true)
 {
     ignoreUnused(numberOfScoops, wantsCone);
+    return {};
 }
 /*
  2)
  */
-float doTheMath(double numerator, double denominator) FIXME see instruction #4)
+float doTheMath(double numerator, double denominator = 0.111) 
 {
     ignoreUnused(numerator, denominator);
     return {};
@@ -105,10 +106,10 @@ float doTheMath(double numerator, double denominator) FIXME see instruction #4)
 /*
  3)
  */
-bool determineHappiness(bool hadCoffee, bool gotExercise) FIXME see instruction #4)
+bool determineHappiness(bool hadCoffee, bool gotExercise = false) 
 {
     ignoreUnused(hadCoffee, gotExercise);
-    return{}; FIXME add a space between the keyword and what's being returned.
+    return {}; 
 }
 /*
  4)
@@ -116,51 +117,55 @@ bool determineHappiness(bool hadCoffee, bool gotExercise) FIXME see instruction 
 float getGarageWidth(int numberOfCars, int numberOfEmptyCarSpots, bool presenceOfGolfCart = false, float widthOfShopArea = 30.f)
 {
     ignoreUnused(numberOfCars, numberOfEmptyCarSpots, presenceOfGolfCart, widthOfShopArea);
-    return{}; FIXME add a space between the keyword and what's being returned.
+    return {}; 
 }
 /*
  5)
  */
-void drinkMyTea(bool teaIsReady)
+bool drinkMyTea(bool teaIsReady)
 {
     ignoreUnused(teaIsReady);
+    return {};
 }
 /*
  6)
  */
-void fillTheVoid(char purpose, bool hadCoffee) FIXME see instruction #4)
+float fillTheVoid(char purpose, bool hadCoffee = true) 
 {
     ignoreUnused(purpose, hadCoffee);
+    return {};
 }
 /*
  7)
  */
-float makeCoolSound(float sample, float awesomeVal) FIXME see instruction #4)
+float makeCoolSound(float sample, float awesomeVal = 0.123f)
 {
     ignoreUnused(sample, awesomeVal);
-    return{}; FIXME add a space between the keyword and what's being returned.
+    return {}; 
 }
 /*
  8)
  */
-float interpolate(float x_1, float x_2) FIXME see instruction #4)
+float interpolate(float x_1, float x_2 = 0.1f)
 {
     ignoreUnused(x_1, x_2);
-    return{}; FIXME add a space between the keyword and what's being returned.
+    return {}; 
 }
 /*
  9)
  */
-void makeCoffee(int waterGrams, int coffeeGrams) FIXME see instruction #4)
+int makeCoffee(int waterGrams, int coffeeGrams = 23) 
 {
     ignoreUnused(waterGrams, coffeeGrams);
+    return {};
 }
 /*
  10)
  */
-void moveIntoVan(bool workIsOnComputer, bool bagsArePacked, int monthsUntilLeaseEnds, int numberOfFamilyMembers = 3, int gallonsOfGasInTank = 20)
+float moveIntoVan(bool workIsOnComputer, bool bagsArePacked, int monthsUntilLeaseEnds, int numberOfFamilyMembers = 3, int gallonsOfGasInTank = 20)
 {
     ignoreUnused(workIsOnComputer, bagsArePacked, monthsUntilLeaseEnds, numberOfFamilyMembers, gallonsOfGasInTank);
+    return {};
 }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -182,27 +187,28 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    FIXME see instruction #5)
+    auto dessertAchievement = getIceCream(2, true);
     //2)
-    FIXME see instruction #5)
+    auto thisValue = doTheMath(12.12, 13.13);
     //3)
-    FIXME see instruction #5)
+    auto qualityOfLife = determineHappiness(true, true);
     //4)
-    FIXME see instruction #5)
+    auto garageWidth = getGarageWidth(1, 0, false, 0.f);
     //5)
-    FIXME see instruction #5)
+    auto teaHasBeenConsumed = drinkMyTea(true);
     //6)
-    FIXME see instruction #5)
+    auto emptySpaceFiller = fillTheVoid('a', false);
     //7)
-    FIXME see instruction #5)
+    auto latestVibe = makeCoolSound(-0.666f, 0.f);
     //8)
-    FIXME see instruction #5)
+    auto interpVal = interpolate(-0.01f, 0.001f);
     //9)
-    FIXME see instruction #5)
+    auto cupOfJoe = makeCoffee(250, 20);
     //10)
-    FIXME see instruction #5)
+    auto moveInDate = moveIntoVan(false, false, 12, 3, 0);
     
     ignoreUnused(carRented);
+    ignoreUnused(dessertAchievement, thisValue, qualityOfLife, garageWidth, teaHasBeenConsumed, emptySpaceFiller, latestVibe, interpVal, cupOfJoe, moveInDate);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
