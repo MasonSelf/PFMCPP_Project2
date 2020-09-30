@@ -15,12 +15,12 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
- 
- 
- 
- 
- 
- 
+ Integer
+ Character
+ Boolean
+ Floating Point
+ Double Floating Point
+ Valueless or Void
  
  
  
@@ -56,10 +56,25 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
 
+    int numberOfHumans = 2147483647;
+    int garageWidth = 2;
+    int acres = 100;
+    char firstLetterOfLastName = 'S';
+    char modelIdentifier = 'a';
+    char assignedParkingLot = 'B';
+    bool isMale = true;
+    bool isRich = false;
+    bool readyToGoCamping = false; 
+    float bathrooms = 1.5f;
+    float limbs = 4.f;
+    float electricBill = 111.53f;
+    double weightOfMyShoe = 0.734768784569;
+    double existenceThreshold = 3E-5;
+    double volumeOfMyCarInterior = 30.348;
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(numberOfHumans, garageWidth, acres, firstLetterOfLastName, modelIdentifier, assignedParkingLot, isMale,isRich, readyToGoCamping, bathrooms, limbs, electricBill, weightOfMyShoe, existenceThreshold, volumeOfMyCarInterior);
 }
 
 /*
@@ -75,43 +90,83 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+bool getIceCream(int numberOfScoops = 2, bool wantsCone = true)
+{
+    ignoreUnused(numberOfScoops, wantsCone);
+    return {};
+}
 /*
  2)
  */
-
+float doTheMath(double numerator, double denominator = 0.111) 
+{
+    ignoreUnused(numerator, denominator);
+    return {};
+}
 /*
  3)
  */
-
+bool determineHappiness(bool hadCoffee, bool gotExercise = false) 
+{
+    ignoreUnused(hadCoffee, gotExercise);
+    return {}; 
+}
 /*
  4)
  */
-
+float getGarageWidth(int numberOfCars, int numberOfEmptyCarSpots, bool presenceOfGolfCart = false, float widthOfShopArea = 30.f)
+{
+    ignoreUnused(numberOfCars, numberOfEmptyCarSpots, presenceOfGolfCart, widthOfShopArea);
+    return {}; 
+}
 /*
  5)
  */
-
+bool drinkMyTea(bool teaIsReady)
+{
+    ignoreUnused(teaIsReady);
+    return {};
+}
 /*
  6)
  */
-
+float fillTheVoid(char purpose, bool hadCoffee = true) 
+{
+    ignoreUnused(purpose, hadCoffee);
+    return {};
+}
 /*
  7)
  */
-
+float makeCoolSound(float sample, float awesomeVal = 0.123f)
+{
+    ignoreUnused(sample, awesomeVal);
+    return {}; 
+}
 /*
  8)
  */
-
+float interpolate(float x_1, float x_2 = 0.1f)
+{
+    ignoreUnused(x_1, x_2);
+    return {}; 
+}
 /*
  9)
  */
-
+int makeCoffee(int waterGrams, int coffeeGrams = 23) 
+{
+    ignoreUnused(waterGrams, coffeeGrams);
+    return {};
+}
 /*
  10)
  */
-
+float moveIntoVan(bool workIsOnComputer, bool bagsArePacked, int monthsUntilLeaseEnds, int numberOfFamilyMembers = 3, int gallonsOfGasInTank = 20)
+{
+    ignoreUnused(workIsOnComputer, bagsArePacked, monthsUntilLeaseEnds, numberOfFamilyMembers, gallonsOfGasInTank);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -132,27 +187,28 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto dessertAchievement = getIceCream(2, true);
     //2)
-    
+    auto thisValue = doTheMath(12.12, 13.13);
     //3)
-    
+    auto qualityOfLife = determineHappiness(true, true);
     //4)
-    
+    auto garageWidth = getGarageWidth(1, 0, false, 0.f);
     //5)
-    
+    auto teaHasBeenConsumed = drinkMyTea(true);
     //6)
-    
+    auto emptySpaceFiller = fillTheVoid('a', false);
     //7)
-    
+    auto latestVibe = makeCoolSound(-0.666f, 0.f);
     //8)
-    
+    auto interpVal = interpolate(-0.01f, 0.001f);
     //9)
-    
+    auto cupOfJoe = makeCoffee(250, 20);
     //10)
-    
+    auto moveInDate = moveIntoVan(false, false, 12, 3, 0);
     
     ignoreUnused(carRented);
+    ignoreUnused(dessertAchievement, thisValue, qualityOfLife, garageWidth, teaHasBeenConsumed, emptySpaceFiller, latestVibe, interpVal, cupOfJoe, moveInDate);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
